@@ -6,7 +6,7 @@
 #    By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 12:13:50 by nahmed-m          #+#    #+#              #
-#    Updated: 2015/12/08 18:47:31 by nahmed-m         ###   ########.fr        #
+#    Updated: 2015/12/10 10:58:22 by nahmed-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC_NAME =  ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 			ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_abs.c \
 			ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 			ft_lstdel.c ft_print_hello.c ft_print_hello_fd.c \
-			ft_char_to_bit.c
+			ft_putchar_unicode.c ft_putstr_unicode.c
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:45:30 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/12/08 18:47:25 by nahmed-m         ###   ########.fr       */
+/*   Updated: 2015/12/10 10:57:28 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,6 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void			ft_print_hello(void);
 void			ft_print_hello_fd(int fd);
-void			ft_char_to_bit(unsigned char c);
-void			ft_bit_to_char(
+void			ft_putchar_unicode(int c);
+void			ft_putstr_unicode(int *str);
 #endif

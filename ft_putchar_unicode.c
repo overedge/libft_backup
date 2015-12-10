@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char_to_bit.c                                   :+:      :+:    :+:   */
+/*   ft_putchar_unicode.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/08 18:30:32 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/12/08 18:47:22 by nahmed-m         ###   ########.fr       */
+/*   Created: 2015/12/10 10:37:29 by nahmed-m          #+#    #+#             */
+/*   Updated: 2015/12/10 10:44:35 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_char_to_bit(unsigned char c)
+#include <unistd.h>
+#include "libft.h"
+
+void	ft_putchar_unicode(int c)
 {
-	char oct = 128;
-	while(oct != 1)
-	{
-		if (c >= oct)
-		{
-			ft_putchar('1');
-			c - oct;
-			oct =/ 2;
-		}
-		else
-			ft_putchar('0');
-	}
+	write(1, &c, 1);
 }
