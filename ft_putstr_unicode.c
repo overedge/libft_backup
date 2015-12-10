@@ -6,18 +6,18 @@
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/10 10:46:03 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/12/10 10:57:22 by nahmed-m         ###   ########.fr       */
+/*   Updated: 2015/12/10 11:06:42 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_unicode(int *str)
+void	ft_putstr_unicode(int *str)
 {
 	int		i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		ft_putchar_unicode(str[i]);
 		i++;
