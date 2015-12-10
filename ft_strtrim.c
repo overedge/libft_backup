@@ -6,7 +6,7 @@
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 04:24:57 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/12/03 00:44:21 by nahmed-m         ###   ########.fr       */
+/*   Updated: 2015/12/10 11:56:00 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strtrim(char const *s)
 	while ((s[j - 1] == ' ' || s[j - 1] == '\n' || s[j - 1] == '\t')
 			&& s[j - 1] < 33 && j > i)
 		j--;
-	if ((str = malloc(sizeof(char) * (j - i + 1))) == NULL)
+	if ((str = (char *)malloc(sizeof(char) * (j - i + 1))) == NULL)
 		return (NULL);
 	while (i < j)
 	{

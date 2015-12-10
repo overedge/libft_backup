@@ -6,7 +6,7 @@
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 03:45:31 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/12/08 15:54:53 by nahmed-m         ###   ########.fr       */
+/*   Updated: 2015/12/10 11:51:27 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char			*ft_itoa(int n)
 	sign = ft_signint(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	if ((result = malloc(sizeof(char) * nbrchar + sign + 1)) == NULL)
+	if ((result = (char*)malloc(sizeof(char) * nbrchar + sign + 1)) == NULL)
 		return (NULL);
 	if (result)
 	{
