@@ -6,7 +6,7 @@
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:48:16 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/11/27 01:40:26 by nahmed-m         ###   ########.fr       */
+/*   Updated: 2015/12/14 08:52:45 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	int		k;
-	int		i;
+	int i;
+	int l;
 
-	k = ft_strlen(dest);
 	i = 0;
-	while (src[i])
+	l = ft_strlen(dest);
+	while (src[i] != '\0')
 	{
-		dest[i + k] = src[i];
+		dest[l + i] = src[i];
 		i++;
 	}
-	dest[i + k] = '\0';
+	dest[l + i] = '\0';
 	return (dest);
 }

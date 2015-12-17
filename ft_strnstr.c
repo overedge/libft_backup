@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 17:09:57 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/11/30 00:22:39 by nahmed-m         ###   ########.fr       */
+/*   Created: 2015/12/14 08:54:35 by nahmed-m          #+#    #+#             */
+/*   Updated: 2015/12/14 08:54:57 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,25 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	size_t		len2;
+	size_t i;
+	size_t j;
+	size_t k;
 
-	if (*s2 == '\0')
-		return ((char *)s1);
-	len2 = ft_strlen(s2);
-	while (*s1 != '\0' && n-- >= len2)
+	i = 0;
+	if (s2[0] == '\0')
+		return ((char*)(s1));
+	while (s1[i] != '\0' && i < n)
 	{
-		if (*s1 == *s2 && ft_memcmp(s1, s2, len2) == 0)
-			return ((char *)s1);
-		s1++;
+		j = i;
+		k = 0;
+		while (s1[j] == s2[k] && j < n)
+		{
+			j++;
+			k++;
+			if (s2[k] == '\0')
+				return (((char*)(&s1[i])));
+		}
+		i++;
 	}
 	return (NULL);
 }

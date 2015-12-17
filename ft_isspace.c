@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_unicode.c                               :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/10 10:37:29 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/12/10 10:44:35 by nahmed-m         ###   ########.fr       */
+/*   Created: 2015/12/15 15:16:56 by nahmed-m          #+#    #+#             */
+/*   Updated: 2015/12/15 15:21:22 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void	ft_putchar_unicode(int c)
+int		ft_isspace(int c)
 {
-	write(1, &c, 1);
+	if (c == 32)
+		return (1);
+	else
+		return (0);
 }

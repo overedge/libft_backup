@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:55:21 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/11/30 00:26:45 by nahmed-m         ###   ########.fr       */
+/*   Created: 2015/12/14 08:50:55 by nahmed-m          #+#    #+#             */
+/*   Updated: 2015/12/14 08:52:31 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,22 @@
 
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t			i;
-	size_t			dsize;
-	const char		*source;
-	char			*destination;
+	size_t i;
+	size_t j;
+	size_t k;
 
-	i = size;
-	source = src;
-	destination = dst;
-	while (i-- != 0 && *destination != '\0')
-		destination++;
-	dsize = destination - dst;
-	i = size - dsize;
-	if (i == 0)
-		return (dsize + ft_strlen(source));
-	while (*source)
+	j = 0;
+	while (dst[j] != '\0' && j < size)
+		j++;
+	i = j;
+	k = 0;
+	while (src[k] != '\0' && j < size - 1)
 	{
-		if (i != 1)
-		{
-			*destination++ = *source;
-			i--;
-		}
-		source++;
+		dst[j] = src[k];
+		j++;
+		k++;
 	}
-	*destination = '\0';
-	return (dsize + (source - src));
+	if (i < size)
+		dst[j] = '\0';
+	return (ft_strlen(src) + i);
 }

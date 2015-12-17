@@ -5,24 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 14:36:44 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/11/24 14:48:26 by nahmed-m         ###   ########.fr       */
+/*   Created: 2015/12/14 08:26:11 by nahmed-m          #+#    #+#             */
+/*   Updated: 2015/12/14 08:27:38 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t len)
 {
-	size_t		index;
-	char		*str;
+	size_t count;
 
-	index = 0;
-	str = (char*)s;
-	while (index < n)
+	count = 0;
+	while (count < len)
 	{
-		str[index] = 0;
-		index++;
+		((char*)s)[count] = 0;
+		count++;
 	}
 }

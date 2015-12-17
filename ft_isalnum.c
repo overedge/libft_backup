@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 17:53:17 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/11/29 01:38:06 by nahmed-m         ###   ########.fr       */
+/*   Created: 2015/12/14 09:00:29 by nahmed-m          #+#    #+#             */
+/*   Updated: 2015/12/14 09:00:58 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isalnum(int c)
 {
-	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	else
 		return (0);

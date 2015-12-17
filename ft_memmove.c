@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:21:47 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/12/10 11:10:36 by nahmed-m         ###   ########.fr       */
+/*   Created: 2015/12/14 08:36:20 by nahmed-m          #+#    #+#             */
+/*   Updated: 2015/12/14 08:36:56 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*temp;
+	char *str;
 
-	if ((temp = (unsigned char*)malloc(sizeof(*temp) * n)) == NULL)
+	str = (char*)malloc(sizeof(src) * (n + 1));
+	if (str == NULL)
 		return (NULL);
-	ft_memcpy(temp, src, n);
-	ft_memcpy(dest, temp, n);
-	free(temp);
-	return (temp);
+	ft_memcpy(str, src, n);
+	ft_memcpy(dest, str, n);
+	free(str);
+	return (dest);
 }

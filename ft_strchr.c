@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:58:01 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/11/27 03:15:52 by nahmed-m         ###   ########.fr       */
+/*   Created: 2015/12/14 08:53:12 by nahmed-m          #+#    #+#             */
+/*   Updated: 2015/12/14 08:53:40 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
+	size_t i;
 
 	i = 0;
-	while (s[i] != '\0' && s[i] != (char)c)
-		i++;
-	if (s[i] == (char)c)
-		return ((char*)&s[i]);
+	while (i < ft_strlen(s) && *s != (char)c)
+		s++;
+	if (*s == c)
+		return ((char*)s);
 	return (NULL);
 }

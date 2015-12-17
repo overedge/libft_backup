@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:45:26 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/11/28 21:59:58 by nahmed-m         ###   ########.fr       */
+/*   Created: 2015/12/14 08:43:12 by nahmed-m          #+#    #+#             */
+/*   Updated: 2015/12/14 08:44:31 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	size_t		i;
+	size_t count;
 
-	i = 0;
-	while (i < n && src[i] != '\0')
+	count = 0;
+	while (count < n && src[count] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		dest[count] = src[count];
+		count++;
 	}
-	while (i < n)
+	while (count < n)
 	{
-		dest[i] = '\0';
-		i++;
+		dest[count] = '\0';
+		count++;
 	}
 	return (dest);
 }
