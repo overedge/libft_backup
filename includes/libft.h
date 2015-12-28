@@ -6,13 +6,25 @@
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:45:30 by nahmed-m          #+#    #+#             */
-/*   Updated: 2015/12/15 15:24:44 by nahmed-m         ###   ########.fr       */
+/*   Updated: 2015/12/28 15:59:46 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+
+/*
+** Size Of buffer For GET_NEXT_LINE
+** Increase It ! If U SEGFAULT !
+*/
+# define BUFF_SIZE 4096
+
+/*
+** Maximum Of File Descriptor For
+** GET_NEXT_LINE
+*/
+# define MAX_FD 256
 
 typedef struct	s_list
 {
@@ -84,4 +96,5 @@ void			ft_print_hello(void);
 void			ft_print_hello_fd(int fd);
 int				ft_isspace(int c);
 int				ft_ispunct(int c);
+int				get_next_line(int const fd, char **line);
 #endif

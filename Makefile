@@ -6,7 +6,7 @@
 #    By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 12:13:50 by nahmed-m          #+#    #+#              #
-#    Updated: 2015/12/28 13:31:03 by nahmed-m         ###   ########.fr        #
+#    Updated: 2015/12/28 16:00:11 by nahmed-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC_NAME =  ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 			ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c ft_abs.c \
 			ft_lstnew.c ft_lstdelone.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 			ft_lstdel.c ft_print_hello.c ft_print_hello_fd.c \
-			ft_isspace.c ft_ispunct.c
+			ft_isspace.c ft_ispunct.c get_next_line.c
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
 NAME = libft.a
@@ -40,3 +40,5 @@ clean :
 fclean : clean
 	rm -rf $(NAME)
 re : fclean all
+
+.PHONY : all clean fclean re
