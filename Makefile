@@ -6,7 +6,7 @@
 #    By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 12:13:50 by nahmed-m          #+#    #+#              #
-#    Updated: 2015/12/15 15:24:55 by nahmed-m         ###   ########.fr        #
+#    Updated: 2015/12/28 13:31:03 by nahmed-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ OBJ_NAME = $(SRC_NAME:.c=.o)
 NAME = libft.a
 
 $(NAME) :
-	gcc -Werror -Wextra -Wall $(SRC_NAME) -c
+	gcc -Werror -Wextra -Wall $(SRC_NAME) -c -I ./includes/
 	ar rc $(NAME) $(OBJ_NAME)
 	ranlib $(NAME)
 
