@@ -6,7 +6,7 @@
 #    By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 12:13:50 by nahmed-m          #+#    #+#              #
-#    Updated: 2015/12/28 16:00:11 by nahmed-m         ###   ########.fr        #
+#    Updated: 2016/01/06 17:18:45 by nahmed-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,16 +29,19 @@ OBJ_NAME = $(SRC_NAME:.c=.o)
 NAME = libft.a
 
 $(NAME) :
-	gcc -Werror -Wextra -Wall $(SRC_NAME) -c -I ./includes/
-	ar rc $(NAME) $(OBJ_NAME)
-	ranlib $(NAME)
+	@gcc -Werror -Wextra -Wall $(SRC_NAME) -c -I ./includes/
+	@ar rc $(NAME) $(OBJ_NAME)
+	@ranlib $(NAME)
+	@echo "\033[1;34m ----LIBFT----- :\033[m \033[1;32m DONE !\033[m"
 
 all : $(NAME)
 
 clean :
-	rm -rf $(OBJ_NAME)
+	@rm -rf $(OBJ_NAME)
+	@echo "\033[1;34m ----LIBFT----- :\033[m \033[1;32m DELETE OBJ FILES !\033[m"
 fclean : clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
+	@echo "\033[1;34m ----LIBFT----- :\033[m \033[1;32m DELETE libft.a !\033[m"
 re : fclean all
 
 .PHONY : all clean fclean re
