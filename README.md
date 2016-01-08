@@ -8,3 +8,5 @@ $ cd libft
 $ make
 $ make clean
 ```
+### Result 
+![Image of Result](https://github.com/overedge/libft_backup/blob/master/result.png?raw=true)
