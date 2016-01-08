@@ -6,7 +6,7 @@
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:45:30 by nahmed-m          #+#    #+#             */
-/*   Updated: 2016/01/06 16:47:48 by nahmed-m         ###   ########.fr       */
+/*   Updated: 2016/01/08 22:45:55 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,6 @@
 ** Increase It ! For Big File !
 */
 # define BUFF_SIZE 4096
-
-/*
-** Maximum Of File Descriptor For
-** GET_NEXT_LINE
-*/
-# define MAX_FD 256
 
 typedef struct	s_list
 {
