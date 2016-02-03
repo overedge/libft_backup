@@ -6,7 +6,7 @@
 #    By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 12:13:50 by nahmed-m          #+#    #+#              #
-#    Updated: 2016/01/06 17:18:45 by nahmed-m         ###   ########.fr        #
+#    Updated: 2016/02/03 21:20:51 by nahmed-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,15 +33,18 @@ $(NAME) :
 	@ar rc $(NAME) $(OBJ_NAME)
 	@ranlib $(NAME)
 	@echo "\033[1;34m ----LIBFT----- :\033[m \033[1;32m DONE !\033[m"
+	@make -C ft_printf
 
 all : $(NAME)
 
 clean :
 	@rm -rf $(OBJ_NAME)
 	@echo "\033[1;34m ----LIBFT----- :\033[m \033[1;32m DELETE OBJ FILES !\033[m"
+	@make clean -C ft_printf
 fclean : clean
 	@rm -rf $(NAME)
 	@echo "\033[1;34m ----LIBFT----- :\033[m \033[1;32m DELETE libft.a !\033[m"
+	@make clean -C ft_printf
 re : fclean all
 
 .PHONY : all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: nahmed-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:45:30 by nahmed-m          #+#    #+#             */
-/*   Updated: 2016/01/08 22:45:55 by nahmed-m         ###   ########.fr       */
+/*   Updated: 2016/02/03 21:24:33 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,5 @@ void			ft_print_hello_fd(int fd);
 int				ft_isspace(int c);
 int				ft_ispunct(int c);
 int				get_next_line(int const fd, char **line);
+int				ft_printf(char *fmt, ...);
 #endif
