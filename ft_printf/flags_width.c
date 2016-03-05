@@ -6,7 +6,7 @@
 /*   By: nahmed-m <nahmed-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 21:26:13 by nahmed-m          #+#    #+#             */
-/*   Updated: 2016/01/25 16:49:20 by nahmed-m         ###   ########.fr       */
+/*   Updated: 2016/03/05 18:12:18 by nahmed-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,12 @@ void	flags_width(char *fmt, t_var *e)
 	int		i;
 
 	i = e->i;
-	if (ft_isdigit(fmt[e->i]))
+	if (fmt[e->i] == '*')
+	{
+		e->f_width = va_arg(e->ap, int);
+		e->i++;
+	}
+	else if (ft_isdigit(fmt[e->i]))
 	{
 		while (ft_isdigit(fmt[e->i]))
 			e->i++;
